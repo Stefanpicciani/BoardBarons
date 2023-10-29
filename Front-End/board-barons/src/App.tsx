@@ -4,6 +4,7 @@ import TemplateDefault from './components/templates/TemplateDedault';
 import SignIn from './components/signin/Signin';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
+import SignUpSide from './components/signup/Signup';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <TemplateDefault>
           <SignIn/>            
+          {/* <SignUpSide/> */}
         </TemplateDefault> 
       </ThemeProvider>
      
