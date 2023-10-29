@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TemplateDefault from './components/templates/TemplateDedault';
+import SignIn from './components/signin/Signin';
+import theme from './theme';
+import { ThemeProvider } from '@mui/material/styles';
+import SignUpSide from './components/signup/Signup';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+        <TemplateDefault>
+          <SignIn/>            
+          {/* <SignUpSide/> */}
+        </TemplateDefault> 
+      </ThemeProvider>
+     
     </div>
   );
 }
