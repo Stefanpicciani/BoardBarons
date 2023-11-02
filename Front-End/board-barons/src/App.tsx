@@ -1,10 +1,9 @@
-import React from 'react';
 import './App.css';
 import TemplateDefault from './components/templates/TemplateDedault';
-import SignIn from './components/signin/Signin';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
-import SignUpSide from './components/signup/Signup';
+import Routes from './routes/routes';
+import { RouterProvider } from 'react-router-dom';
 
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <TemplateDefault>
-          <SignIn/>            
-          {/* <SignUpSide/> */}
+           <RouterProvider router={Routes}/>
         </TemplateDefault> 
       </ThemeProvider>
      
