@@ -1,34 +1,24 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import {
+    Avatar,
+    Button,
+    CssBaseline,
+    Paper,
+    Box,
+    Grid,
+    Typography,
+} from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
 import iconImage from '../../assets/images/icon_board_barons.png';
-import imageMain from '../../assets/images/xadrez_cr7_messi.jpg';
-import styles from './Home.module.css'
-import { FormControl, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
-import  IconButton from '@mui/material/IconButton';
-import { VisibilityOff, Visibility } from '@mui/icons-material';
-// import { Link } from 'react-router-dom';
-import Link from 'react-router-dom';
+import imageMain from '../../assets/images/xadrez.jpeg';
+import styles from './Home.module.css';
+import * as MuiLink from '@mui/material';
+import {Link} from 'react-router-dom';
 
 
 
 export default function Home() {
-    const [showPassword, setShowPassword] = React.useState(false);
-
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.preventDefault();
-    };
-    
-    
+   
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -39,9 +29,9 @@ export default function Home() {
   };
 
   return (
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '100vh', justifyContent: 'center', }}>
         <CssBaseline />
-        <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'top'} justifyContent={'center'}>
+        {/* <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'top'} justifyContent={'center'}>
             <Box paddingTop={3}>
                 <Box alignItems={'center'}  sx={{ width: '105%' , height: 'auto'}}>
                     <img alt="logo" src={imageMain} className={styles.imageMain}/>    
@@ -53,8 +43,22 @@ export default function Home() {
                              
                 </Box>               
             </Box>
-        </Grid>
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{backgroundColor: "#2D3040"}}>
+        </Grid> */}
+         {/* <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: `url(${imageMain})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t:any) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        /> */}
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -62,44 +66,46 @@ export default function Home() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              paddingLeft: 4, 
+              paddingRight: 4,
             }}
           >
-            <img alt="logo" src={iconImage} className={styles.imageIcon}/>
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5" color="#ffffff">
-                A SUA REDE SOCIAL DE BOARD GAMES
-            </Typography>
-            <Box sx={{textAlign:"left", listStyle: 'none'}} color="#fee973">
-                <ul>
-                    <li>Adicione amigos em comum.</li>
-                    <li>Monte o seu grupo de jogadores por zona.  </li>
-                    <li>Marque com eles, e saia jogando por aí.</li>
-                </ul>
-                      
-            </Box>          
-                {/* <Link to={"/auth/signup"}> */}
-                    <Button
-                    type="submit"
-                    fullWidth
-                    color='primary'
-                    variant="contained"
-                    sx={{ mt: 3, mb: 2 , color: "#ffffff", backgroundColor: "secondary.main"}}
-                    >
-                        Bora se cadastrar?
-                    </Button>
-                {/* </Link> */}
-               
-                <Grid container justifyContent="flex-end">
-                <Grid item>
-                    {/* <Link href="#" variant="body2"> */}
-                    Já possui uma conta? Entrar
-                    {/* </Link> */}
-                </Grid>
-                </Grid>
+                <img alt="logo" src={iconImage} className={styles.imageIcon}/>
+                <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}}>
+                    <LockOutlinedIcon />
+                </Avatar>
+           
+                <Box maxWidth="sm" sx={{textAlign:"left", listStyle: 'none', marginTop: 4, paddingLeft: 5, paddingRight: 4}} style={{width: '100%'}}>
+                    <Typography component="h1" variant="h5">
+                        A SUA REDE SOCIAL DE BOARD GAMES
+                    </Typography>
+                    <Typography  sx={{ mt: 4, mb: 2, color: '#212121' }} >º Adicione amigos em comum.</Typography>
+                    <Typography  sx={{ mt: 2, mb: 2, color: '#212121' }} >º Monte o seu grupo de jogadores por zona.  </Typography>
+                    <Typography  sx={{ mt: 2, mb: 2, color: '#212121' }} >º Marque com eles, e saia jogando por aí.</Typography>
+
+                    <Link to={"/auth/signup"} style={{width: '100%'}}>
+                        <Button
+                        type="submit"
+                        fullWidth
+                        color='primary'
+                        variant="contained"
+                        sx={{ mt: 3, mb: 2 , color: "#ffffff", backgroundColor: "secondary.main"}}
+                        >
+                            Bora se cadastrar?
+                        </Button>
+                    </Link>
+
+                    <Grid container justifyContent="flex-end">
+                        <Grid item  sx={{ mt: 2, mb: 2 }}>
+                            <Link to={'/auth/signin'}>
+                                <MuiLink.Link>
+                                    Já possui uma conta? Entrar
+                                </MuiLink.Link>                        
+                            </Link>
+                        </Grid>
+                    </Grid>
+                </Box>          
             </Box>
-        
         </Grid>
       </Grid>
   );

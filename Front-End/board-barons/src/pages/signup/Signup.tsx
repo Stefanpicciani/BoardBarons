@@ -5,7 +5,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import * as MuiLink from '@mui/material';
+import {Link} from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -24,11 +25,13 @@ function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://boardbarons.com.br">
-        Board Barons
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+      <Link to={'/'}>
+        <MuiLink.Link color="inherit">
+          Board Barons
+        </MuiLink.Link>{' '}
+        {new Date().getFullYear()}
+        {'.'}
+      </Link>     
     </Typography>
   );
 }
@@ -161,9 +164,12 @@ export default function SignUpSide() {
                 </Button>
                 <Grid container justifyContent="flex-end">
                 <Grid item>
-                    <Link href="#" variant="body2">
-                    Já possui uma conta? Entrar
-                    </Link>
+                  <Link to={'/auth/signin'}>
+                    <MuiLink.Link variant="body2">
+                      Já possui uma conta? Entrar
+                    </MuiLink.Link>
+                  </Link>
+                    
                 </Grid>
                 </Grid>
             </Box>

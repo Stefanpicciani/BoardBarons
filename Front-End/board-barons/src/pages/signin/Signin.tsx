@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import * as  MuiLink from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -19,16 +19,19 @@ import { FormControl, FormLabel, Input, InputAdornment, InputLabel, OutlinedInpu
 import  AccountCircle  from '@mui/icons-material/AccountCircle';
 import  IconButton from '@mui/material/IconButton';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://boardbarons.com.br">
-        Board Barons
-      </Link>{' '}
+      <Link to={'/'}> 
+        <MuiLink.Link>
+          Board Barons
+        </MuiLink.Link>{' '}       
+      </Link>     
       {new Date().getFullYear()}
-      {'.'}
+        {'.'}
     </Typography>
   );
 }
@@ -121,14 +124,18 @@ export default function SignInSide() {
               </Button>
               <Grid container>
                 <Grid item xs  justifyContent={'left'} textAlign={'left'}>
-                  <Link href="#" variant="body2" >
-                    Esqueceu sua senha?
-                  </Link>
+                  {/* <Link to={'/forgotpassword'}> */}
+                    <MuiLink.Link variant="body2" >
+                      Esqueceu sua senha?
+                    </MuiLink.Link>
+                  {/* </Link> */}                  
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Cadastrar-se"}
-                  </Link>
+                  <Link to={'/auth/signup'}>
+                    <MuiLink.Link variant="body2">
+                      {"Cadastrar-se"}
+                    </MuiLink.Link>
+                  </Link>                 
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 15 }} />
