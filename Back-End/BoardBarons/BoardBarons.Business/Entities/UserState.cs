@@ -1,11 +1,7 @@
 ﻿namespace BoardBarons.Business.Entities
 {
-    public enum UserState
+    public class UserState : Entity
     {
-        Active,
-        Inactive,
-        Blocked,
-        IsReactived,
-        Archived
+        public string? Name { get; set; }
     }
 }
