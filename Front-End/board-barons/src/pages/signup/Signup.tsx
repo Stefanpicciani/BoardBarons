@@ -20,6 +20,7 @@ import { FormControl, FormLabel, Input, InputAdornment, InputLabel, OutlinedInpu
 import  AccountCircle  from '@mui/icons-material/AccountCircle';
 import  IconButton from '@mui/material/IconButton';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
+import TemplateDefault from '../../components/templates/TemplateDedault';
 
 function Copyright(props: any) {
   return (
@@ -58,6 +59,7 @@ export default function SignUpSide() {
   };
 
   return (
+    <TemplateDefault>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'center'} justifyContent={'center'}>
@@ -176,5 +178,6 @@ export default function SignUpSide() {
           </Box>
         </Grid>
       </Grid>
+    </TemplateDefault>
   );
 }

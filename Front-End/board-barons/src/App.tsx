@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <TemplateDefault>
-           <RouterProvider router={Routes}/>
-        </TemplateDefault> 
+        {/* <TemplateDefault> */}
+           <RouterProvider router={Routes}></RouterProvider>
+        {/* </TemplateDefault>  */}
       </ThemeProvider>
      
     </div>

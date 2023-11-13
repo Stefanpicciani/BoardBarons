@@ -20,6 +20,7 @@ import  AccountCircle  from '@mui/icons-material/AccountCircle';
 import  IconButton from '@mui/material/IconButton';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import TemplateDefault from '../../components/templates/TemplateDedault';
 
 function Copyright(props: any) {
   return (
@@ -58,6 +59,7 @@ export default function SignInSide() {
   };
 
   return (
+    <TemplateDefault>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'center'} justifyContent={'center'}>
@@ -143,5 +145,6 @@ export default function SignInSide() {
           </Box>
         </Grid>
       </Grid>
+    </TemplateDefault>
   );
 }

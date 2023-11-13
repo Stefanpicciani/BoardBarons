@@ -7,6 +7,7 @@ import {
     Box,
     Grid,
     Typography,
+    Container,
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import iconImage from '../../assets/images/icon_board_barons.png';
@@ -14,6 +15,16 @@ import imageMain from '../../assets/images/xadrez.jpeg';
 import styles from './Home.module.css';
 import * as MuiLink from '@mui/material';
 import {Link} from 'react-router-dom';
+import TemplateDefault from '../../components/templates/TemplateDedault';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import StarIcon from '@mui/icons-material/StarBorder';
+import Toolbar from '@mui/material/Toolbar';
+import GlobalStyles from '@mui/material/GlobalStyles';
 
 
 
@@ -29,84 +40,26 @@ export default function Home() {
   };
 
   return (
-      <Grid container component="main" sx={{ height: '100vh', justifyContent: 'center', }}>
-        <CssBaseline />
-        {/* <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'top'} justifyContent={'center'}>
-            <Box paddingTop={3}>
-                <Box alignItems={'center'}  sx={{ width: '105%' , height: 'auto'}}>
-                    <img alt="logo" src={imageMain} className={styles.imageMain}/>    
-                    <Box paddingLeft={15}>
-                        <Typography textAlign={'left'} color="#ffffff">
-                            A plataforma que une as pessoas e cria mentes assertivas    
-                        </Typography>     
-                    </Box>                    
-                             
-                </Box>               
-            </Box>
-        </Grid> */}
-         {/* <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage: `url(${imageMain})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t:any) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        /> */}
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-          <Box
-            sx={{
-              my: 8,
-              mx: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              paddingLeft: 4, 
-              paddingRight: 4,
-            }}
-          >
-                <img alt="logo" src={iconImage} className={styles.imageIcon}/>
-                <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}}>
-                    <LockOutlinedIcon />
-                </Avatar>
-           
-                <Box maxWidth="sm" sx={{textAlign:"left", listStyle: 'none', marginTop: 4, paddingLeft: 5, paddingRight: 4}} style={{width: '100%'}}>
-                    <Typography component="h1" variant="h5">
-                        A SUA REDE SOCIAL DE BOARD GAMES
-                    </Typography>
-                    <Typography  sx={{ mt: 4, mb: 2, color: '#212121' }} >º Adicione amigos em comum.</Typography>
-                    <Typography  sx={{ mt: 2, mb: 2, color: '#212121' }} >º Monte o seu grupo de jogadores por zona.  </Typography>
-                    <Typography  sx={{ mt: 2, mb: 2, color: '#212121' }} >º Marque com eles, e saia jogando por aí.</Typography>
-
-                    <Link to={"/auth/signup"} style={{width: '100%'}}>
-                        <Button
-                        type="submit"
-                        fullWidth
-                        color='primary'
-                        variant="contained"
-                        sx={{ mt: 3, mb: 2 , color: "#ffffff", backgroundColor: "secondary.main"}}
-                        >
-                            Bora se cadastrar?
-                        </Button>
-                    </Link>
-
-                    <Grid container justifyContent="flex-end">
-                        <Grid item  sx={{ mt: 2, mb: 2 }}>
-                            <Link to={'/auth/signin'}>
-                                <MuiLink.Link>
-                                    Já possui uma conta? Entrar
-                                </MuiLink.Link>                        
-                            </Link>
-                        </Grid>
-                    </Grid>
-                </Box>          
-            </Box>
-        </Grid>
-      </Grid>
+    <TemplateDefault>
+       
+      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color=""
+          gutterBottom
+        >
+          Pricing
+        </Typography>
+        <Typography variant="h5" align="center" color="text.secondary" component="p">
+          Quickly build an effective pricing table for your potential customers with
+          this layout. It&apos;s built with default MUI components with little
+          customization.
+        </Typography>
+      </Container>
+      {/* End hero unit */}
+      
+    </TemplateDefault>
   );
 }
