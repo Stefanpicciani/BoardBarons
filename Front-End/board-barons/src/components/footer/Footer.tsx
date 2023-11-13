@@ -35,7 +35,7 @@ const Footer = () => {
               : theme.palette.grey[800],
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ backgroundColor: "#152048", color: "#ffffff"}}>
           <Typography variant="body1">
             My sticky footer can be found here.
           </Typography>
