@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardBarons_Api", "BoardBarons_Api\BoardBarons_Api.csproj", "{BF14C359-A37E-4261-8BBA-2456FBD2612A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardBarons.Api", "BoardBarons_Api\BoardBarons.Api.csproj", "{BF14C359-A37E-4261-8BBA-2456FBD2612A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardBarons.Business", "BoardBarons.Business\BoardBarons.Business.csproj", "{F1F89BD4-762B-48BE-B0F9-6D1326A9292D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardBarons.Data", "BoardBarons.Data\BoardBarons.Data.csproj", "{4347CEAD-91AD-404B-8666-C239E18DE2B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardBarons.Identity", "BoardBarons.Identity\BoardBarons.Identity.csproj", "{BD1A2FE6-B0F4-4B82-B6BA-E4042C34E30F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{BF14C359-A37E-4261-8BBA-2456FBD2612A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF14C359-A37E-4261-8BBA-2456FBD2612A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF14C359-A37E-4261-8BBA-2456FBD2612A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F89BD4-762B-48BE-B0F9-6D1326A9292D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F89BD4-762B-48BE-B0F9-6D1326A9292D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F89BD4-762B-48BE-B0F9-6D1326A9292D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F89BD4-762B-48BE-B0F9-6D1326A9292D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4347CEAD-91AD-404B-8666-C239E18DE2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4347CEAD-91AD-404B-8666-C239E18DE2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4347CEAD-91AD-404B-8666-C239E18DE2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4347CEAD-91AD-404B-8666-C239E18DE2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1A2FE6-B0F4-4B82-B6BA-E4042C34E30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1A2FE6-B0F4-4B82-B6BA-E4042C34E30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1A2FE6-B0F4-4B82-B6BA-E4042C34E30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1A2FE6-B0F4-4B82-B6BA-E4042C34E30F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

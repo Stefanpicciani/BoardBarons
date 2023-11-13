@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 
 const TemplateDefault = ({ children } : any ) => {
@@ -8,7 +9,7 @@ const TemplateDefault = ({ children } : any ) => {
         <>
             <Header />    
             {children}    
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

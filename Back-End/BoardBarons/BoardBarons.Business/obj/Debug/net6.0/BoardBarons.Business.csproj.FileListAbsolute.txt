@@ -1,0 +1,11 @@
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\bin\Debug\net6.0\BoardBarons.Business.deps.json
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\bin\Debug\net6.0\BoardBarons.Business.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\bin\Debug\net6.0\BoardBarons.Business.pdb
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\refint\BoardBarons.Business.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\BoardBarons.Business.pdb
+C:\Users\Usuario\OneDrive\Área de Trabalho\BoardBarons\BoardBarons\Back-End\BoardBarons\BoardBarons.Business\obj\Debug\net6.0\ref\BoardBarons.Business.dll

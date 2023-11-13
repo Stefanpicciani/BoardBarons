@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "XFMTLtSqi5AlraMXc37/TEt5yy6lz5DGO+b/gxyvdX8=",
-  "Source": "BoardBarons_Api",
-  "BasePath": "_content/BoardBarons_Api",
+  "Hash": "cgat28oL+bbr4FSxJLhzYRfJD9cSqXDJKcZ5o8/4+W0=",
+  "Source": "BoardBarons.Api",
+  "BasePath": "_content/BoardBarons.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
