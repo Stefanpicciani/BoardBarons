@@ -1,8 +1,10 @@
-﻿
+﻿using BoardBarons.Business.Entities;
+using BoardBarons.Business.Interfaces.IRepository;
 
 namespace BoardBarons.Business.Interfaces.IGroup
 {
-    public interface IGroupService : IDisposable
+    public interface IGroupService : IRepository<Group>, IDisposable
     {
+    
     }
 }
