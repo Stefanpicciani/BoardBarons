@@ -1,5 +1,5 @@
 ﻿using BoardBarons.Business.Entities;
-using BoardBarons.Business.IRepository;
+using BoardBarons.Business.Interfaces.IRepository;
 using BoardBarons.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;

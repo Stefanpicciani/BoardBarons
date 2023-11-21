@@ -10,16 +10,16 @@ namespace BoardBarons.Business.Entities
     {
         public string? Name { get; set; }
         public DateTime DateEvent { get; set; }
-        public string? Created_At { get; set; }
-        public string? Updated_At { get; set; }
-        public string? Desativated_At { get; set; }
+        public DateTime? Created_At { get; set; }
+        public DateTime? Updated_At { get; set; }
+        public DateTime? Desativated_At { get; set; }
         public Guid? Group_Id { get; set; }
         public Guid Media_Id { get; set; }
 
 
 
-        public virtual Media? Media { get; set; }
-        public virtual Group? Group { get; set; }
-        public virtual ICollection<User>? Users { get; set; }
+        public Media? Media { get; set; }
+        public Group? Group { get; set; }
+        public ICollection<User>? Users { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace BoardBarons.Business.Entities
     public class Users_Status
     {
         public Guid User_Id {  get; set; }
-        public UserState User_State { get; set;}
+        public UserState? User_State { get; set;}
     }
 }

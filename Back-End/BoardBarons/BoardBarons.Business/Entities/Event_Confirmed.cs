@@ -12,7 +12,7 @@ namespace BoardBarons.Business.Entities
         public Guid Event_Id { get; set; }
         public bool IsConfirmed { get; set; }
 
-        public virtual Event? Event { get; set; }
-        public virtual User? User { get; set; }
+        public Event? Event { get; set; }
+        public User? User { get; set; }
     }
 }

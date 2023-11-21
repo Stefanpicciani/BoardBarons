@@ -10,10 +10,17 @@ namespace BoardBarons.Business.Entities
     {
         public string? Key { get; set; }
         public Guid Complaint_Type_Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime ActivedAt { get; set; }
+        public DateTime DesActivedAt { get; set; }
         public string? Reported_User_Id  { get; set; }
         public string? Accuser_User_Id { get; set; }
         public string? Message { get; set; }
 
-        public virtual ComplaintType? ComplaintType { get; set; }
+
+        public ComplaintState? ComplaintState { get; set; }
+        public User? User_Reported { get; set; }
+        public User? User_Accuser { get; set; }
+        public ComplaintType? ComplaintType { get; set; }
     }
 }

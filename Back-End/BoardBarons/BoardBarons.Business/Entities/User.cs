@@ -27,6 +27,6 @@ namespace BoardBarons.Business.Entities
        public int AccessFailedCount {  get; set; }
        public Guid Region_Id {  get; set; }
 
-       public virtual Region? Region { get; set;}
+       public Region? Region { get; set;}
     }
 }
