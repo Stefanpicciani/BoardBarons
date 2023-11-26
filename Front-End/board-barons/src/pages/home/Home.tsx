@@ -26,6 +26,7 @@ import CardHeader from '@mui/material/CardHeader';
 import StarIcon from '@mui/icons-material/StarBorder';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Hero from '../../components/hero/Hero';
+import About from '../../components/about/About';
 
 
 
@@ -43,6 +44,7 @@ export default function Home() {
   return (
     <TemplateDefault>
       <Hero/>       
+      <About/>
       <Container  disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
                     <Typography
                     component="h1"
