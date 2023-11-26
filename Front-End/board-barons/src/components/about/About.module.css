@@ -4,7 +4,24 @@
     width: 50%;
 } */
 .img {
-  width: max(50px, 50vw);
+  width: max(50px, 40vw);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li, .liList {
+  display: flex;
+  align-items: center;
+}
+
+.siblingTitle {
+
 }
 /* .sibilings {
   max-width: 50%;

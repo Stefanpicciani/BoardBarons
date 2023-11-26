@@ -52,7 +52,7 @@ export default function Home() {
                     align="center"
                     color=""
                     gutterBottom
-                    id="about"
+                    // id="about"
                     >
                     Pricing
                     </Typography>
