@@ -27,6 +27,7 @@ import StarIcon from '@mui/icons-material/StarBorder';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Hero from '../../components/hero/Hero';
 import About from '../../components/about/About';
+import Contact from '../../components/contact/Contact';
 
 
 
@@ -52,7 +53,6 @@ export default function Home() {
                     align="center"
                     color=""
                     gutterBottom
-                    // id="about"
                     >
                     Pricing
                     </Typography>
@@ -61,7 +61,8 @@ export default function Home() {
                     this layout. It&apos;s built with default MUI components with little
                     customization.
                     </Typography>
-                </Container>
+      </Container>
+      <Contact/>
     </TemplateDefault>
   );
 }
