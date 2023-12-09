@@ -1,4 +1,13 @@
 
 .card {    
-    box-shadow: 5px 9px 17px #0000003b;
+    background-color: #e4eaee33;
 }
+
+.icon {
+    color: #1de9b6;
+    padding: 5px;
+    border: 2px solid inherit;
+    background-color: rgb(244, 245, 247);
+    border-radius: 50%;
+}
+

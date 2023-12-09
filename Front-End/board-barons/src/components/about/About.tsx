@@ -9,7 +9,7 @@ const About = () => {
   
     return(
        
-        <Box id="about"  sx={{ backgroundColor: "#f6f9fe", width: "100", fontFamily: 'Roboto'}} >
+        <Box id="about"  sx={{ backgroundColor: "#f6f9fe", width: "100", fontFamily: 'Roboto', py: 5}} >
           <Container>
           <Box paddingTop={5}>
             <Chip label='Quem Somos' 

@@ -1,66 +1,64 @@
-import { Box, Card, CardContent, Container, Grid, Typography } from "@mui/material";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import * as React from 'react';
 import style from './Contact.module.css';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Unstable_Grid2';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import { Typography } from '@mui/material';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const Contact = () => {
-
-
-    return(
-        <Container sx={{ py: 8 }} maxWidth="lg">
-            <Grid container spacing={4}>                
-                <Grid item xs={12} sm={6} md={6} 
-                    className={style.card}
-                >
-                    <Box
-                     sx={{ height: '100%', display: "flex", flexDirection: 'column'}}
-                    >
-                        <Box sx={{ flexGrow: 1, backgroundColor: 'none'}}
-                        >
-                            <Typography textAlign={"center"}>
-                                <LocationOnOutlinedIcon/>                                
-                            </Typography>
-                            <Typography component="h5" >NOSSO ENDEREÇO</Typography>
-                            <Typography>Av. Paulista 1486, Bloco 06, 2º andar, sala 27</Typography>
-                        </Box>
-                    </Box>
-                </Grid>                
-                <Grid item xs={12} sm={5} md={3}
-                    className={style.card}                
-                >
-                    <Box
-                     sx={{ height: '100%', display: "flex", flexDirection: 'column'}}
-                    >
-                        <CardContent sx={{ flexGrow: 1, backgroundColor: "inherit"}}>
-                            <Typography textAlign={"center"}>
-                                <MailOutlineIcon/>                                
-                            </Typography>
-                            <Typography component="h5" >NOSSO ENDEREÇO</Typography>
-                            <Typography>Av. Paulista 1486, Bloco 06, 2º andar, sala 27</Typography>
-                        </CardContent>
-                    </Box>
-                </Grid>                
-                <Grid item xs={12} sm={6} md={3}
-                 className={style.card}
-                >
-                    <Box
-                     sx={{ height: '100%', display: "flex", flexDirection: 'column'}}
-                    >
-                        <CardContent sx={{ flexGrow: 1, backgroundColor: "#ffffff"}}>
-                            <Typography textAlign={"center"}>
-                                <CallOutlinedIcon/>                                
-                            </Typography>
-                            <Typography component="h5" >NOSSO ENDEREÇO</Typography>
-                            <Typography>Av. Paulista 1486, Bloco 06, 2º andar, sala 27</Typography>
-                        </CardContent>
-                    </Box>
-                </Grid>                
-            </Grid>
-        </Container>
-    );
+export default function CenteredElementGrid() {
+  return (
+    <Box sx={{ flexGrow: 1 , my: 5}}>
+      <Grid container spacing={2} minHeight={160} columns={12} justifyContent="center">
+        <Grid xs={12} sm={12} md={3} lg={3} xl={3} display="flex" 
+          justifyContent="center" alignItems="center" 
+          sx={{mx: 2, my:2, py: 5}}
+          className={style.card}
+        >
+          <Box>
+          <LocationOnIcon className={style.icon}/>
+            <Typography variant='h6'>
+              Localização
+            </Typography>
+            <Typography variant="subtitle1">
+              Av. Paulista 7500, São Paulo, SP.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid xs={12} sm={12} md={3} lg={3} xl={3} display="flex" 
+          justifyContent="center" alignItems="center"
+          sx={{mx: 2, my:2, py: 5}}
+          className={style.card}
+          >
+          <Box>
+            <EmailIcon className={style.icon} />
+            <Typography variant='h6'>
+              Email
+            </Typography>
+            <Typography variant="subtitle1">
+              dev.teste@outlook.com
+            </Typography>
+          </Box>
+          
+        </Grid>
+        <Grid xs={12} sm={12} md={3} lg={3} xl={3} display="flex" 
+          justifyContent="center" alignItems="center"
+          sx={{mx: 2, my:2, py: 5}}
+          className={style.card}
+          >
+          <Box>
+          <PhoneIcon className={style.icon}/>
+            <Typography variant='h6'>
+              Telefone
+            </Typography>
+            <Typography variant="subtitle1">
+              (11) 99999-9999
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
 }
-
-export default Contact;

@@ -21,6 +21,7 @@ import  IconButton from '@mui/material/IconButton';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import TemplateDefault from '../../components/templates/TemplateDedault';
+import Header from '../../components/header/Header';
 
 function Copyright(props: any) {
   return (
@@ -59,7 +60,8 @@ export default function SignInSide() {
   };
 
   return (
-    <TemplateDefault>
+    <>
+      <Header />    
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid display={'flex'} item xs={false} sm={4} md={7} alignItems={'center'} justifyContent={'center'}>
@@ -145,6 +147,6 @@ export default function SignInSide() {
           </Box>
         </Grid>
       </Grid>
-    </TemplateDefault>
+    </>
   );
 }
