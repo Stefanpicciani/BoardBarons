@@ -11,3 +11,12 @@
     border-radius: 50%;
 }
 
+
+.cardContact {    
+    max-width: 40%;
+} 
+
+.map {
+    border:0;
+    /* allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" */
+}

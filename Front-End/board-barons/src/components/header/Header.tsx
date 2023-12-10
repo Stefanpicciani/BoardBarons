@@ -33,6 +33,15 @@ export default function ButtonAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const scrollToAbout = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+    // 👇 Will scroll smoothly to the top of the next section
+    element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -75,7 +84,7 @@ export default function ButtonAppBar() {
               <Button sx={{ my: 2, color: 'white', display: 'block' , mr: 2 }}> Blog </Button>  
             </Link>
 
-            <Link to="#" className={style.Links}>
+            <Link to="#" className={style.Links} onClick={() => scrollToAbout()}>
               <Button sx={{ my: 2, color: 'white', display: 'block' , mr: 2 }}> Contato </Button>  
             </Link>
           </Box>
