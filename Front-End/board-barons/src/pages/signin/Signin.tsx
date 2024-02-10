@@ -6,13 +6,13 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import * as  MuiLink from '@mui/material';
-import Paper from '@mui/material/Paper';
+import Paper from '@mui/material/Paper';  
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
-import iconImage from '../../assets/images/icon_board_barons.png';
+import iconImage from '../../assets/images/logo.png';
 import backgroundImage from '../../assets/images/background_board_signin.jpg';
 import styles from './Signin.module.css'
 import { FormControl, FormLabel, Input, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
@@ -25,10 +25,10 @@ import Header from '../../components/header/Header';
 
 function Copyright(props: any) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="text.secondary" align="center" {...props} sx={{ color: '#ffffff', cursor: 'pointer', mt: 20}}>
       {'Copyright © '}
       <Link to={'/'}> 
-        <MuiLink.Link>
+        <MuiLink.Link sx={{ color: '#8cc63f', cursor: 'pointer'}}>
           Board Barons
         </MuiLink.Link>{' '}       
       </Link>     
@@ -71,7 +71,7 @@ export default function SignInSide() {
                 </Box>               
             </Box>
         </Grid>
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{backgroundColor: "#e9e2e2"}}>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{backgroundColor: "#000000"}}>
           <Box
             sx={{
               my: 8,
@@ -129,14 +129,14 @@ export default function SignInSide() {
               <Grid container>
                 <Grid item xs  justifyContent={'left'} textAlign={'left'}>
                   {/* <Link to={'/forgotpassword'}> */}
-                    <MuiLink.Link variant="body2" >
+                    <MuiLink.Link variant="body2" sx={{ color: '#8cc63f', cursor: 'pointer'}}>
                       Esqueceu sua senha?
                     </MuiLink.Link>
                   {/* </Link> */}                  
                 </Grid>
                 <Grid item>
                   <Link to={'/auth/signup'}>
-                    <MuiLink.Link variant="body2">
+                    <MuiLink.Link variant="body2" sx={{ color: '#8cc63f', cursor: 'pointer'}}>
                       {"Cadastrar-se"}
                     </MuiLink.Link>
                   </Link>                 

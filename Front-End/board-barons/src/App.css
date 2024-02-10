@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .App {
+  width: 100vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+  overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
   text-align: center;
   font-family: 'Roboto';
 }

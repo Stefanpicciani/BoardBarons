@@ -3,8 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import * as MuiLink from '@mui/material';
 import {Link} from 'react-router-dom';
 import Paper from '@mui/material/Paper';
@@ -12,23 +10,19 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import { createTheme } from '@mui/material/styles';
-import iconImage from '../../assets/images/icon_board_barons.png';
-import backgroundImage from '../../assets/images/background_board_signin.jpg';
+import iconImage from '../../assets/images/logo.png';
 import styles from './Signup.module.css'
 import { FormControl, FormLabel, Input, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
-import  AccountCircle  from '@mui/icons-material/AccountCircle';
 import  IconButton from '@mui/material/IconButton';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
-import TemplateDefault from '../../components/templates/TemplateDedault';
 import Header from '../../components/header/Header';
 
 function Copyright(props: any) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="text.secondary" align="center" {...props} sx={{ color: '#ffffff', cursor: 'pointer'}}>
       {'Copyright © '}
       <Link to={'/'}>
-        <MuiLink.Link color="inherit">
+        <MuiLink.Link color="inherit" sx={{ color: '#8cc63f', cursor: 'pointer'}}>
           Board Barons
         </MuiLink.Link>{' '}
         {new Date().getFullYear()}
@@ -71,7 +65,7 @@ export default function SignUpSide() {
                 </Box>               
             </Box>
         </Grid>
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{backgroundColor: "#e9e2e2"}}>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{backgroundColor: "#000000"}}>
           <Box
             sx={{
               my: 8,
@@ -85,7 +79,7 @@ export default function SignUpSide() {
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}}>
               <LockOutlinedIcon />
             </Avatar>
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h5" sx={{ color: '#8cc63f', cursor: 'pointer'}}>
               Criar conta
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
@@ -101,7 +95,7 @@ export default function SignUpSide() {
                     autoFocus
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} sx={{ color: '#8cc63f', cursor: 'pointer'}}>
                     <TextField
                     required
                     fullWidth
@@ -111,7 +105,7 @@ export default function SignUpSide() {
                     autoComplete="family-name"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} sx={{ color: '#8cc63f', cursor: 'pointer'}}>
                     <TextField
                     required
                     fullWidth
@@ -123,7 +117,7 @@ export default function SignUpSide() {
                 </Grid>
                 <Grid item xs={12}>
                     <FormControl fullWidth  variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
+                        <InputLabel htmlFor="outlined-adornment-password" sx={{ color: '#8cc63f', cursor: 'pointer'}}>Senha</InputLabel>
                         <OutlinedInput
                             fullWidth
                             id="outlined-adornment-password"
@@ -169,7 +163,7 @@ export default function SignUpSide() {
                 <Grid container justifyContent="flex-end">
                 <Grid item>
                   <Link to={'/auth/signin'}>
-                    <MuiLink.Link variant="body2">
+                    <MuiLink.Link variant="body2" sx={{ color: '#8cc63f', cursor: 'pointer'}}>
                       Já possui uma conta? Entrar
                     </MuiLink.Link>
                   </Link>
