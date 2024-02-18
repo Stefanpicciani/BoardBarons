@@ -12,6 +12,6 @@ namespace BoardBarons.Business.Entities
         public Guid User_Id { get; set; }
 
         public Group? Group { get; set; }
-        public ICollection<User>? Users { get; set; }
+        public IEnumerable<User>? Users { get; set; }
     }
 }

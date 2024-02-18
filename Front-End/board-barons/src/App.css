@@ -6,6 +6,7 @@
   overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
   text-align: center;
   font-family: 'Roboto';
+  background-color: #161616;
 }
 
 .App-logo {
