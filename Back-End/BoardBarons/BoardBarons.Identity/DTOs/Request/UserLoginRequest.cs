@@ -9,11 +9,11 @@ namespace BoardBarons.Identity.DTOs.Request
 {
     public class UserLoginRequest
     {
-        [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        [EmailAddress(ErrorMessage = "O campo {0} é inválido")]
+        [Required(ErrorMessage = "O field {0} is required!")]
+        [EmailAddress(ErrorMessage = "O field {0} is required!")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [Required(ErrorMessage = "O field {0} is required!")]
         public string Password { get; set; }
     }
 }

@@ -7,11 +7,79 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 //using BoardBarons.Api.Data;
 using BoardBarons.Business.Entities;
+using System.Security.Principal;
+using BoardBarons.Identity.Interfaces;
+using BoardBarons.Api.Controllers.Shared;
+using BoardBarons.Identity.DTOs.Request;
+using BoardBarons.Identity.DTOs.Response;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace BoardBarons.Api.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : ApiControllerBase
     {
+        private readonly IIdentityService _identityService;
+
+        public UsersController(IIdentityService identityService) => _identityService = identityService;
+
+
+        [HttpPost]
+        [ActionName("register")]
+        public async Task<IActionResult> Register(UserRegisterRequest userRegisterRequest)
+        {
+            if(!ModelState.IsValid) return BadRequest();
+
+            var result = await _identityService.UserRegisterRequest(userRegisterRequest);
+
+            if (result.Sucess) return Ok(result);
+
+            else if(result.Errors.Count > 0)
+            {
+                // var problemDetails = new CustomProblemDetails(HttpStatusCode.BadRequest, Request, errors: result.Errors);
+                //return BadRequest(problemDetails);
+            }
+
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+
+
+        [HttpPost]
+        [ActionName("login")]
+        public async Task<ActionResult<UserLoginResponse>> Login(UserLoginRequest userLoginRequest)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+
+            var result = await _identityService.UserLoginRequest(userLoginRequest);
+
+            if(result.Success) return Ok(result);
+
+            return Unauthorized();
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ActionName("refresh_token")]
+        public async Task<ActionResult<UserResgisterResponse>> RefreshLogin()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            var userId = identity?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null) return BadRequest();
+
+            var result = await _identityService.UserLoginWithoutPassword(userId);
+
+            if (result.Success) return Ok(result);
+
+            return Unauthorized();
+        }
+
+
+
+
+
+
         //private readonly BoardBaronsApiContext _context;
 
         //public UsersController(BoardBaronsApiContext context)
@@ -151,7 +219,7 @@ namespace BoardBarons.Api.Controllers
         //    {
         //        _context.User.Remove(user);
         //    }
-            
+
         //    await _context.SaveChangesAsync();
         //    return RedirectToAction(nameof(Index));
         //}

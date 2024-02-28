@@ -28,6 +28,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BoardBarons.Business\BoardBarons.Business.csproj" />
+    <ProjectReference Include="..\BoardBarons.Data\BoardBarons.Data.csproj" />
+    <ProjectReference Include="..\BoardBarons.Identity\BoardBarons.Identity.csproj" />
   </ItemGroup>
 
 </Project>

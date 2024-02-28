@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using BoardBarons.Api.Data;
+using BoardBarons.Data.Context;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<BoardBaronsApiContext>(options =>
+builder.Services.AddDbContext<BoardBaronsContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BoardBaronsApiContext") ?? throw new InvalidOperationException("Connection string 'BoardBaronsApiContext' not found.")));
 
 // Add services to the container.
