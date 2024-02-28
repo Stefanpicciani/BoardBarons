@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace BoardBarons.Business.Services.Complaint
 {
-    public class ComplaintService : IComplaintService, IComplaintRepository
+    public class ComplaintService : IComplaintService
+    //public class ComplaintService : IComplaintService, IComplaintRepository
     {
-        private readonly IComplaintRepository _complaintRepository;
+        //private readonly IComplaintRepository _complaintRepository;
         private readonly IComplaintService _complaintService;
 
-        public ComplaintService(IComplaintService complaintService, IComplaintRepository complaintRepository)
-        {
-            _complaintRepository = complaintRepository;
-            _complaintService = complaintService;
-        }
+        //public ComplaintService(IComplaintService complaintService, IComplaintRepository complaintRepository)
+        //{
+        //    _complaintRepository = complaintRepository;
+        //    _complaintService = complaintService;
+        //}
 
 
         public Task AddComplaint(Entities.Complaint complaint)
@@ -68,7 +69,7 @@ namespace BoardBarons.Business.Services.Complaint
         public void Dispose()
         {
             _complaintService.Dispose();
-            _complaintRepository.Dispose();
+            //_complaintRepository.Dispose();
         }
     }
 }

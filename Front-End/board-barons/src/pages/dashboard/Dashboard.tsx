@@ -26,7 +26,7 @@ const Dashboard = () => {
                     </Typography>
                 </Box>
                 <Box display={"flex"} justifyContent={"center"}>
-                    <Box sx={{ backgroundColor: "#ffffff" , mx: 1 }} >
+                    <Box sx={{ backgroundColor: "#ffffff" , mx : 1 }} >
                         <h5>Box1</h5>
                     </Box>
                     <Box sx={{ backgroundColor: "#ffffff", mx:1 }}>
